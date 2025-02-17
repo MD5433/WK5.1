@@ -1,7 +1,7 @@
 import java.util.HashMap;
 
 public class AddressBook {
-    private HashMap<String, String> contacts = new HashMap<String, String>();
+    private static HashMap<String, String> contacts = new HashMap<String, String>();
     private String searchContact;
 
     public AddressBook(HashMap<String, String> contacts, String searchContact) {
@@ -32,10 +32,19 @@ public class AddressBook {
                 ", searchContact='" + searchContact + '\'' +
                 '}';
     }
-
-    public void add(String key, String value){
-        contacts.put()
+//other methods
+    public static void addContact(Person a){
+        contacts.put(a.getName(), a.getEmail());
+        System.out.println("Contact: " + a.getName() + " and their email: " + a.getEmail() + " was added.");
 
 
     }
+
+    public static void searchContact(String name){
+        String email = contacts.get(name);
+        System.out.println("The contact: " + name + " email is: " + email);
+    }
+
+
 }
+

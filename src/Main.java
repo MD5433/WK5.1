@@ -24,7 +24,7 @@ public class Main {
 
             Person person = new Person(usName, usEmail);
             AddressBook.addContact(person);
-
+//search for a contact code
             System.out.println("Would you like to search for a contact by name? (yes/no)");
             String searchResponse = userIn.nextLine();
             if (searchResponse.equals("yes")) {
